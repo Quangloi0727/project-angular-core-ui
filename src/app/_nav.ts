@@ -190,6 +190,28 @@ export const navItems: INavData[] = [
     }
   },
   {
+    name: 'Quản lý User',
+    url: '/manage-user',
+    icon: 'icon-user',
+    children: [
+      {
+        name: 'Danh sách User',
+        url: '/manage-user/list',
+        icon: 'icon-list'
+      },
+      {
+        name: 'Thêm mới User',
+        url: '/manage-user/add',
+        icon: 'icon-user-follow'
+      },
+      // {
+      //   name: 'Modals',
+      //   url: '/notifications/modals',
+      //   icon: 'icon-bell'
+      // }
+    ]
+  },
+  {
     divider: true
   },
   {

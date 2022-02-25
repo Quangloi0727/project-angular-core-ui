@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <i class="fa fa-align-justify"></i> Danh sách User
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>FullName</th>
+          <th>UserName</th>
+          <th>Created</th>
+          <th>Khởi tạo từ</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of arrUser">
+          <td>{{ item.fullname }}</td>
+          <td>{{ item.username }}</td>
+          <td>{{ item.created | date : 'dd/MM/YYYY HH:mm:ss' }}</td>
+          <td>{{ today - item.created | date : 'mm:ss' }}</td>
+          <td>
+            <span class="badge badge-success">Active</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+      <li class="page-item active">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+</div>
