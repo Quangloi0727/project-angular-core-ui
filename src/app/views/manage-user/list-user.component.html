@@ -14,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of arrUser">
+        <tr *ngFor="let item of arrUser | paginate: { itemsPerPage: 2, currentPage: p }">
           <td>{{ item.fullname }}</td>
           <td>{{ item.username }}</td>
           <td>{{ item.created | date : 'dd/MM/YYYY HH:mm:ss' }}</td>
@@ -26,14 +26,7 @@
       </tbody>
     </table>
     <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-      <li class="page-item active">
-        <a class="page-link" href="#">1</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">4</a></li>
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </ul>
   </div>
 </div>

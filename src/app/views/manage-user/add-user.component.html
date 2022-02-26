@@ -3,10 +3,10 @@
     Thêm mới User
   </div>
   <div class="card-body">
-    <form>
+    <form [formGroup]="userForm">
       <div class="form-group">
         <div class="input-group">
-          <input type="text" class="form-control" id="username" placeholder="username" #username/>
+          <input type="text" class="form-control" id="username" placeholder="username" formControlName="username" />
           <div class="input-group-append">
             <span class="input-group-text"><i class="fa fa-user"></i></span>
           </div>
@@ -14,7 +14,7 @@
       </div>
       <div class="form-group">
         <div class="input-group">
-          <input type="text" class="form-control" id="fullname" placeholder="fullname" #fullname/>
+          <input type="text" class="form-control" id="fullname" placeholder="fullname" formControlName="fullname"/>
           <div class="input-group-append">
             <span class="input-group-text"><i class="fa fa-envelope"></i></span>
           </div>
@@ -22,7 +22,7 @@
       </div>
       <div class="form-group">
         <div class="input-group">
-          <input type="password" class="form-control" id="password" placeholder="Password" #password/>
+          <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password"/>
           <div class="input-group-append">
             <span class="input-group-text"><i class="fa fa-asterisk"></i></span>
           </div>
@@ -30,7 +30,7 @@
       </div>
       <div class="form-group row">
         <div class="col-sm-6">
-          <button type="button" class="btn btn-primary" (click)="addUser(username.value,fullname.value,password.value)">Tạo mới</button>
+          <button type="button" class="btn btn-primary" (click)="addUser()">Tạo mới</button>
         </div>
       </div>
     </form>

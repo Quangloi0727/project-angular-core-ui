@@ -1,8 +1,9 @@
 // Angular
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
+import { NgxPaginationModule } from "ngx-pagination";
+import { AddUserComponent } from './add-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Alert Component
 // import { AlertModule } from 'ngx-bootstrap/alert';
 import { ListUserComponent } from './list-user.component';
@@ -20,13 +21,15 @@ import { ManageUserRoutingModule } from './manage-user-routing.module';
   imports: [
     CommonModule,
     ManageUserRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
+    ReactiveFormsModule
     // AlertModule.forRoot(),
     // ModalModule.forRoot()
   ],
   declarations: [
     ListUserComponent,
-    // BadgesComponent,
+    AddUserComponent,
     // ModalsComponent
   ]
 })
